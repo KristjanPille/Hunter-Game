@@ -1,0 +1,120 @@
+table#hunterBase {
+  min-width: 500px;
+  min-height: 500px;
+  empty-cells: show;
+  float: left;
+}
+
+.board {
+  width: 3em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  border: 1px solid #000;
+  background-image: url("grass.jpg");
+}
+.HunterHut {
+  background-image: url("HUNTERHUT.jpg");
+}
+
+#information {
+  display:inline-flex;
+  max-width: 300px;
+}
+
+#selectedPeacefulBuilding {
+  float: left;
+  margin-left: 50px;
+  max-width: 300px;
+}
+
+#selectedAttackBuilding {
+  float: left;
+  margin-left: 50px;
+  max-width: 300px;
+}
+#shopTable {
+  float: left;
+  max-width: 300px;
+  color: #7289da;
+}
+
+.grid-container {
+  position: fixed;
+  left: 50px;
+  min-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.flex-container {
+  position: fixed;
+  left: 50px;
+  right: 50px;
+  display: flex;
+}
+
+.flex-child {
+  flex-shrink: 1;
+  border: 2px solid yellow;
+}
+
+.flex-child:first-child {
+  margin-right: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: seagreen;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: mediumseagreen;
+}
+
+table#shopTable tr.shopBuilding:hover {
+  background-color: limegreen;
+}
+
+#unplacedBuildings {
+  float: left;
+  max-width: 150px;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 56px;
+  height: 100%;
+  text-align: center;
+}
+
+#overlay span {
+  padding: 3px;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 900;
+  font-size: larger;
+  background-color: beige;
+  position:relative;
+  right: 10%;
+  top:30%;
+}
+#heroes {
+  float: bottom;
+}

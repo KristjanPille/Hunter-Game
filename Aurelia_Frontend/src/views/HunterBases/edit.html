@@ -1,0 +1,495 @@
+<template>
+  <body>
+  <require from="./hunterBase.css"></require>
+  <div class="flex-container">
+  <div class="flex-child magenta">
+  <table id="hunterBase">
+    <tbody>
+    <tr>
+      <td class="board" id="0|0" click.delegate="moveBuilding(0, 0)" mouseover.delegate="mouseOverInfo(0, 0)"></td>
+      <td class="board" id="0|1" click.delegate="moveBuilding(0, 1)" mouseover.delegate="mouseOverInfo(0, 1)"></td>
+      <td class="board" id="0|2" click.delegate="moveBuilding(0, 2)" mouseover.delegate="mouseOverInfo(0, 2)"></td>
+      <td class="board" id="0|3" click.delegate="moveBuilding(0, 3)" mouseover.delegate="mouseOverInfo(0, 3)"></td>
+      <td class="board" id="0|4" click.delegate="moveBuilding(0, 4)" mouseover.delegate="mouseOverInfo(0, 4)"></td>
+      <td class="board" id="0|5" click.delegate="moveBuilding(0, 5)" mouseover.delegate="mouseOverInfo(0, 5)"></td>
+      <td class="board" id="0|6" click.delegate="moveBuilding(0, 6)" mouseover.delegate="mouseOverInfo(0, 6)"></td>
+      <td class="board" id="0|7" click.delegate="moveBuilding(0, 7)" mouseover.delegate="mouseOverInfo(0, 7)"></td>
+      <td class="board" id="0|8" click.delegate="moveBuilding(0, 8)" mouseover.delegate="mouseOverInfo(0, 8)"></td>
+      <td class="board" id="0|9" click.delegate="moveBuilding(0, 9)" mouseover.delegate="mouseOverInfo(0, 9)"></td>
+      <td class="board" id="0|10" click.delegate="moveBuilding(0, 10)" mouseover.delegate="mouseOverInfo(0, 10)"></td>
+      <td class="board" id="0|11" click.delegate="moveBuilding(0, 11)" mouseover.delegate="mouseOverInfo(0, 11)"></td>
+      <td class="board" id="0|12" click.delegate="moveBuilding(0, 12)" mouseover.delegate="mouseOverInfo(0, 12)"></td>
+      <td class="board" id="0|13" click.delegate="moveBuilding(0, 13)" mouseover.delegate="mouseOverInfo(0, 13)"></td>
+      <td class="board" id="0|14" click.delegate="moveBuilding(0, 14)" mouseover.delegate="mouseOverInfo(0, 14)"></td>
+      <td class="board" id="0|15" click.delegate="moveBuilding(0, 15)" mouseover.delegate="mouseOverInfo(0, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="1|0" click.delegate="moveBuilding(1, 0)" mouseover.delegate="mouseOverInfo(1, 0)"></td>
+      <td class="board" id="1|1" click.delegate="moveBuilding(1, 1)" mouseover.delegate="mouseOverInfo(1, 1)"></td>
+      <td class="board" id="1|2" click.delegate="moveBuilding(1, 2)" mouseover.delegate="mouseOverInfo(1, 2)"></td>
+      <td class="board" id="1|3" click.delegate="moveBuilding(1, 3)" mouseover.delegate="mouseOverInfo(1, 3)"></td>
+      <td class="board" id="1|4" click.delegate="moveBuilding(1, 4)" mouseover.delegate="mouseOverInfo(1, 4)"></td>
+      <td class="board" id="1|5" click.delegate="moveBuilding(1, 5)" mouseover.delegate="mouseOverInfo(1, 5)"></td>
+      <td class="board" id="1|6" click.delegate="moveBuilding(1, 6)" mouseover.delegate="mouseOverInfo(1, 6)"></td>
+      <td class="board" id="1|7" click.delegate="moveBuilding(1, 7)" mouseover.delegate="mouseOverInfo(1, 7)"></td>
+      <td class="board" id="1|8" click.delegate="moveBuilding(1, 8)" mouseover.delegate="mouseOverInfo(1, 8)"></td>
+      <td class="board" id="1|9" click.delegate="moveBuilding(1, 9)" mouseover.delegate="mouseOverInfo(1, 9)"></td>
+      <td class="board" id="1|10" click.delegate="moveBuilding(1, 10)" mouseover.delegate="mouseOverInfo(1, 10)"></td>
+      <td class="board" id="1|11" click.delegate="moveBuilding(1, 11)" mouseover.delegate="mouseOverInfo(1, 11)"></td>
+      <td class="board" id="1|12" click.delegate="moveBuilding(1, 12)" mouseover.delegate="mouseOverInfo(1, 12)"></td>
+      <td class="board" id="1|13" click.delegate="moveBuilding(1, 13)" mouseover.delegate="mouseOverInfo(1, 13)"></td>
+      <td class="board" id="1|14" click.delegate="moveBuilding(1, 14)" mouseover.delegate="mouseOverInfo(1, 14)"></td>
+      <td class="board" id="1|15" click.delegate="moveBuilding(1, 15)" mouseover.delegate="mouseOverInfo(1, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="2|0" click.delegate="moveBuilding(2, 0)" mouseover.delegate="mouseOverInfo(2, 0)"></td>
+      <td class="board" id="2|1" click.delegate="moveBuilding(2, 1)" mouseover.delegate="mouseOverInfo(2, 1)"></td>
+      <td class="board" id="2|2" click.delegate="moveBuilding(2, 2)" mouseover.delegate="mouseOverInfo(2, 2)"></td>
+      <td class="board" id="2|3" click.delegate="moveBuilding(2, 3)" mouseover.delegate="mouseOverInfo(2, 3)"></td>
+      <td class="board" id="2|4" click.delegate="moveBuilding(2, 4)" mouseover.delegate="mouseOverInfo(2, 4)"></td>
+      <td class="board" id="2|5" click.delegate="moveBuilding(2, 5)" mouseover.delegate="mouseOverInfo(2, 5)"></td>
+      <td class="board" id="2|6" click.delegate="moveBuilding(2, 6)" mouseover.delegate="mouseOverInfo(2, 6)"></td>
+      <td class="board" id="2|7" click.delegate="moveBuilding(2, 7)" mouseover.delegate="mouseOverInfo(2, 7)"></td>
+      <td class="board" id="2|8" click.delegate="moveBuilding(2, 8)" mouseover.delegate="mouseOverInfo(2, 8)"></td>
+      <td class="board" id="2|9" click.delegate="moveBuilding(2, 9)" mouseover.delegate="mouseOverInfo(2, 9)"></td>
+      <td class="board" id="2|10" click.delegate="moveBuilding(2, 10)" mouseover.delegate="mouseOverInfo(2, 10)"></td>
+      <td class="board" id="2|11" click.delegate="moveBuilding(2, 11)" mouseover.delegate="mouseOverInfo(2, 11)"></td>
+      <td class="board" id="2|12" click.delegate="moveBuilding(2, 12)" mouseover.delegate="mouseOverInfo(2, 12)"></td>
+      <td class="board" id="2|13" click.delegate="moveBuilding(2, 13)" mouseover.delegate="mouseOverInfo(2, 13)"></td>
+      <td class="board" id="2|14" click.delegate="moveBuilding(2, 14)" mouseover.delegate="mouseOverInfo(2, 14)"></td>
+      <td class="board" id="2|15" click.delegate="moveBuilding(2, 15)" mouseover.delegate="mouseOverInfo(2, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="3|0" click.delegate="moveBuilding(3, 0)" mouseover.delegate="mouseOverInfo(3, 0)"></td>
+      <td class="board" id="3|1" click.delegate="moveBuilding(3, 1)" mouseover.delegate="mouseOverInfo(3, 1)"></td>
+      <td class="board" id="3|2" click.delegate="moveBuilding(3, 2)" mouseover.delegate="mouseOverInfo(3, 2)"></td>
+      <td class="board" id="3|3" click.delegate="moveBuilding(3, 3)" mouseover.delegate="mouseOverInfo(3, 3)"></td>
+      <td class="board" id="3|4" click.delegate="moveBuilding(3, 4)" mouseover.delegate="mouseOverInfo(3, 4)"></td>
+      <td class="board" id="3|5" click.delegate="moveBuilding(3, 5)" mouseover.delegate="mouseOverInfo(3, 5)"></td>
+      <td class="board" id="3|6" click.delegate="moveBuilding(3, 6)" mouseover.delegate="mouseOverInfo(3, 6)"></td>
+      <td class="board" id="3|7" click.delegate="moveBuilding(3, 7)" mouseover.delegate="mouseOverInfo(3, 7)"></td>
+      <td class="board" id="3|8" click.delegate="moveBuilding(3, 8)" mouseover.delegate="mouseOverInfo(3, 8)"></td>
+      <td class="board" id="3|9" click.delegate="moveBuilding(3, 9)" mouseover.delegate="mouseOverInfo(3, 9)"></td>
+      <td class="board" id="3|10" click.delegate="moveBuilding(3, 10)" mouseover.delegate="mouseOverInfo(3, 10)"></td>
+      <td class="board" id="3|11" click.delegate="moveBuilding(3, 11)" mouseover.delegate="mouseOverInfo(3, 11)"></td>
+      <td class="board" id="3|12" click.delegate="moveBuilding(3, 12)" mouseover.delegate="mouseOverInfo(3, 12)"></td>
+      <td class="board" id="3|13" click.delegate="moveBuilding(3, 13)" mouseover.delegate="mouseOverInfo(3, 13)"></td>
+      <td class="board" id="3|14" click.delegate="moveBuilding(3, 14)" mouseover.delegate="mouseOverInfo(3, 14)"></td>
+      <td class="board" id="3|15" click.delegate="moveBuilding(3, 15)" mouseover.delegate="mouseOverInfo(3, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="4|0" click.delegate="moveBuilding(4, 0)" mouseover.delegate="mouseOverInfo(4, 0)"></td>
+      <td class="board" id="4|1" click.delegate="moveBuilding(4, 1)" mouseover.delegate="mouseOverInfo(4, 1)"></td>
+      <td class="board" id="4|2" click.delegate="moveBuilding(4, 2)" mouseover.delegate="mouseOverInfo(4, 2)"></td>
+      <td class="board" id="4|3" click.delegate="moveBuilding(4, 3)" mouseover.delegate="mouseOverInfo(4, 3)"></td>
+      <td class="board" id="4|4" click.delegate="moveBuilding(4, 4)" mouseover.delegate="mouseOverInfo(4, 4)"></td>
+      <td class="board" id="4|5" click.delegate="moveBuilding(4, 5)" mouseover.delegate="mouseOverInfo(4, 5)"></td>
+      <td class="board" id="4|6" click.delegate="moveBuilding(4, 6)" mouseover.delegate="mouseOverInfo(4, 6)"></td>
+      <td class="board" id="4|7" click.delegate="moveBuilding(4, 7)" mouseover.delegate="mouseOverInfo(4, 7)"></td>
+      <td class="board" id="4|8" click.delegate="moveBuilding(4, 8)" mouseover.delegate="mouseOverInfo(4, 8)"></td>
+      <td class="board" id="4|9" click.delegate="moveBuilding(4, 9)" mouseover.delegate="mouseOverInfo(4, 9)"></td>
+      <td class="board" id="4|10" click.delegate="moveBuilding(4, 10)" mouseover.delegate="mouseOverInfo(4, 10)"></td>
+      <td class="board" id="4|11" click.delegate="moveBuilding(4, 11)" mouseover.delegate="mouseOverInfo(4, 11)"></td>
+      <td class="board" id="4|12" click.delegate="moveBuilding(4, 12)" mouseover.delegate="mouseOverInfo(4, 12)"></td>
+      <td class="board" id="4|13" click.delegate="moveBuilding(4, 13)" mouseover.delegate="mouseOverInfo(4, 13)"></td>
+      <td class="board" id="4|14" click.delegate="moveBuilding(4, 14)" mouseover.delegate="mouseOverInfo(4, 14)"></td>
+      <td class="board" id="4|15" click.delegate="moveBuilding(4, 15)" mouseover.delegate="mouseOverInfo(4, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="5|0" click.delegate="moveBuilding(5, 0)" mouseover.delegate="mouseOverInfo(5, 0)"></td>
+      <td class="board" id="5|1" click.delegate="moveBuilding(5, 1)" mouseover.delegate="mouseOverInfo(5, 1)"></td>
+      <td class="board" id="5|2" click.delegate="moveBuilding(5, 2)" mouseover.delegate="mouseOverInfo(5, 2)"></td>
+      <td class="board" id="5|3" click.delegate="moveBuilding(5, 3)" mouseover.delegate="mouseOverInfo(5, 3)"></td>
+      <td class="board" id="5|4" click.delegate="moveBuilding(5, 4)" mouseover.delegate="mouseOverInfo(5, 4)"></td>
+      <td class="board" id="5|5" click.delegate="moveBuilding(5, 5)" mouseover.delegate="mouseOverInfo(5, 5)"></td>
+      <td class="board" id="5|6" click.delegate="moveBuilding(5, 6)" mouseover.delegate="mouseOverInfo(5, 6)"></td>
+      <td class="board" id="5|7" click.delegate="moveBuilding(5, 7)" mouseover.delegate="mouseOverInfo(5, 7)"></td>
+      <td class="board" id="5|8" click.delegate="moveBuilding(5, 8)" mouseover.delegate="mouseOverInfo(5, 8)"></td>
+      <td class="board" id="5|9" click.delegate="moveBuilding(5, 9)" mouseover.delegate="mouseOverInfo(5, 9)"></td>
+      <td class="board" id="5|10" click.delegate="moveBuilding(5, 10)" mouseover.delegate="mouseOverInfo(5, 10)"></td>
+      <td class="board" id="5|11" click.delegate="moveBuilding(5, 11)" mouseover.delegate="mouseOverInfo(5, 11)"></td>
+      <td class="board" id="5|12" click.delegate="moveBuilding(5, 12)" mouseover.delegate="mouseOverInfo(5, 12)"></td>
+      <td class="board" id="5|13" click.delegate="moveBuilding(5, 13)" mouseover.delegate="mouseOverInfo(5, 13)"></td>
+      <td class="board" id="5|14" click.delegate="moveBuilding(5, 14)" mouseover.delegate="mouseOverInfo(5, 14)"></td>
+      <td class="board" id="5|15" click.delegate="moveBuilding(5, 15)" mouseover.delegate="mouseOverInfo(5, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="6|0" click.delegate="moveBuilding(6, 0)" mouseover.delegate="mouseOverInfo(6, 0)"></td>
+      <td class="board" id="6|1" click.delegate="moveBuilding(6, 1)" mouseover.delegate="mouseOverInfo(6, 1)"></td>
+      <td class="board" id="6|2" click.delegate="moveBuilding(6, 2)" mouseover.delegate="mouseOverInfo(6, 2)"></td>
+      <td class="board" id="6|3" click.delegate="moveBuilding(6, 3)" mouseover.delegate="mouseOverInfo(6, 3)"></td>
+      <td class="board" id="6|4" click.delegate="moveBuilding(6, 4)" mouseover.delegate="mouseOverInfo(6, 4)"></td>
+      <td class="board" id="6|5" click.delegate="moveBuilding(6, 5)" mouseover.delegate="mouseOverInfo(6, 5)"></td>
+      <td class="board" id="6|6" click.delegate="moveBuilding(6, 6)" mouseover.delegate="mouseOverInfo(6, 6)"></td>
+      <td class="board" id="6|7" click.delegate="moveBuilding(6, 7)" mouseover.delegate="mouseOverInfo(6, 7)"></td>
+      <td class="board" id="6|8" click.delegate="moveBuilding(6, 8)" mouseover.delegate="mouseOverInfo(6, 8)"></td>
+      <td class="board" id="6|9" click.delegate="moveBuilding(6, 9)" mouseover.delegate="mouseOverInfo(6, 9)"></td>
+      <td class="board" id="6|10" click.delegate="moveBuilding(6, 10)" mouseover.delegate="mouseOverInfo(6, 10)"></td>
+      <td class="board" id="6|11" click.delegate="moveBuilding(6, 11)" mouseover.delegate="mouseOverInfo(6, 11)"></td>
+      <td class="board" id="6|12" click.delegate="moveBuilding(6, 12)" mouseover.delegate="mouseOverInfo(6, 12)"></td>
+      <td class="board" id="6|13" click.delegate="moveBuilding(6, 13)" mouseover.delegate="mouseOverInfo(6, 13)"></td>
+      <td class="board" id="6|14" click.delegate="moveBuilding(6, 14)" mouseover.delegate="mouseOverInfo(6, 14)"></td>
+      <td class="board" id="6|15" click.delegate="moveBuilding(6, 15)" mouseover.delegate="mouseOverInfo(6, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="7|0" click.delegate="moveBuilding(7, 0)" mouseover.delegate="mouseOverInfo(7, 0)"></td>
+      <td class="board" id="7|1" click.delegate="moveBuilding(7, 1)" mouseover.delegate="mouseOverInfo(7, 1)"></td>
+      <td class="board" id="7|2" click.delegate="moveBuilding(7, 2)" mouseover.delegate="mouseOverInfo(7, 2)"></td>
+      <td class="board" id="7|3" click.delegate="moveBuilding(7, 3)" mouseover.delegate="mouseOverInfo(7, 3)"></td>
+      <td class="board" id="7|4" click.delegate="moveBuilding(7, 4)" mouseover.delegate="mouseOverInfo(7, 4)"></td>
+      <td class="board" id="7|5" click.delegate="moveBuilding(7, 5)" mouseover.delegate="mouseOverInfo(7, 5)"></td>
+      <td class="board" id="7|6" click.delegate="moveBuilding(7, 6)" mouseover.delegate="mouseOverInfo(7, 6)"></td>
+      <td class="board" id="7|7" click.delegate="moveBuilding(7, 7)" mouseover.delegate="mouseOverInfo(7, 7)"></td>
+      <td class="board" id="7|8" click.delegate="moveBuilding(7, 8)" mouseover.delegate="mouseOverInfo(7, 8)"></td>
+      <td class="board" id="7|9" click.delegate="moveBuilding(7, 9)" mouseover.delegate="mouseOverInfo(7, 9)"></td>
+      <td class="board" id="7|10" click.delegate="moveBuilding(7, 10)" mouseover.delegate="mouseOverInfo(7, 10)"></td>
+      <td class="board" id="7|11" click.delegate="moveBuilding(7, 11)" mouseover.delegate="mouseOverInfo(7, 11)"></td>
+      <td class="board" id="7|12" click.delegate="moveBuilding(7, 12)" mouseover.delegate="mouseOverInfo(7, 12)"></td>
+      <td class="board" id="7|13" click.delegate="moveBuilding(7, 13)" mouseover.delegate="mouseOverInfo(7, 13)"></td>
+      <td class="board" id="7|14" click.delegate="moveBuilding(7, 14)" mouseover.delegate="mouseOverInfo(7, 14)"></td>
+      <td class="board" id="7|15" click.delegate="moveBuilding(7, 15)" mouseover.delegate="mouseOverInfo(7, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="8|0" click.delegate="moveBuilding(8, 0)" mouseover.delegate="mouseOverInfo(8, 0)"></td>
+      <td class="board" id="8|1" click.delegate="moveBuilding(8, 1)" mouseover.delegate="mouseOverInfo(8, 1)"></td>
+      <td class="board" id="8|2" click.delegate="moveBuilding(8, 2)" mouseover.delegate="mouseOverInfo(8, 2)"></td>
+      <td class="board" id="8|3" click.delegate="moveBuilding(8, 3)" mouseover.delegate="mouseOverInfo(8, 3)"></td>
+      <td class="board" id="8|4" click.delegate="moveBuilding(8, 4)" mouseover.delegate="mouseOverInfo(8, 4)"></td>
+      <td class="board" id="8|5" click.delegate="moveBuilding(8, 5)" mouseover.delegate="mouseOverInfo(8, 5)"></td>
+      <td class="board" id="8|6" click.delegate="moveBuilding(8, 6)" mouseover.delegate="mouseOverInfo(8, 6)"></td>
+      <td class="board" id="8|7" click.delegate="moveBuilding(8, 7)" mouseover.delegate="mouseOverInfo(8, 7)"></td>
+      <td class="board" id="8|8" click.delegate="moveBuilding(8, 8)" mouseover.delegate="mouseOverInfo(8, 8)"></td>
+      <td class="board" id="8|9" click.delegate="moveBuilding(8, 9)" mouseover.delegate="mouseOverInfo(8, 9)"></td>
+      <td class="board" id="8|10" click.delegate="moveBuilding(8, 10)" mouseover.delegate="mouseOverInfo(8, 10)"></td>
+      <td class="board" id="8|11" click.delegate="moveBuilding(8, 11)" mouseover.delegate="mouseOverInfo(8, 11)"></td>
+      <td class="board" id="8|12" click.delegate="moveBuilding(8, 12)" mouseover.delegate="mouseOverInfo(8, 12)"></td>
+      <td class="board" id="8|13" click.delegate="moveBuilding(8, 13)" mouseover.delegate="mouseOverInfo(8, 13)"></td>
+      <td class="board" id="8|14" click.delegate="moveBuilding(8, 14)" mouseover.delegate="mouseOverInfo(8, 14)"></td>
+      <td class="board" id="8|15" click.delegate="moveBuilding(8, 15)" mouseover.delegate="mouseOverInfo(8, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="9|0" click.delegate="moveBuilding(9, 0)" mouseover.delegate="mouseOverInfo(9, 0)"></td>
+      <td class="board" id="9|1" click.delegate="moveBuilding(9, 1)" mouseover.delegate="mouseOverInfo(9, 1)"></td>
+      <td class="board" id="9|2" click.delegate="moveBuilding(9, 2)" mouseover.delegate="mouseOverInfo(9, 2)"></td>
+      <td class="board" id="9|3" click.delegate="moveBuilding(9, 3)" mouseover.delegate="mouseOverInfo(9, 3)"></td>
+      <td class="board" id="9|4" click.delegate="moveBuilding(9, 4)" mouseover.delegate="mouseOverInfo(9, 4)"></td>
+      <td class="board" id="9|5" click.delegate="moveBuilding(9, 5)" mouseover.delegate="mouseOverInfo(9, 5)"></td>
+      <td class="board" id="9|6" click.delegate="moveBuilding(9, 6)" mouseover.delegate="mouseOverInfo(9, 6)"></td>
+      <td class="board" id="9|7" click.delegate="moveBuilding(9, 7)" mouseover.delegate="mouseOverInfo(9, 7)"></td>
+      <td class="board" id="9|8" click.delegate="moveBuilding(9, 8)" mouseover.delegate="mouseOverInfo(9, 8)"></td>
+      <td class="board" id="9|9" click.delegate="moveBuilding(9, 9)" mouseover.delegate="mouseOverInfo(9, 9)"></td>
+      <td class="board" id="9|10" click.delegate="moveBuilding(9, 10)" mouseover.delegate="mouseOverInfo(9, 10)"></td>
+      <td class="board" id="9|11" click.delegate="moveBuilding(9, 11)" mouseover.delegate="mouseOverInfo(9, 11)"></td>
+      <td class="board" id="9|12" click.delegate="moveBuilding(9, 12)" mouseover.delegate="mouseOverInfo(9, 12)"></td>
+      <td class="board" id="9|13" click.delegate="moveBuilding(9, 13)" mouseover.delegate="mouseOverInfo(9, 13)"></td>
+      <td class="board" id="9|14" click.delegate="moveBuilding(9, 14)" mouseover.delegate="mouseOverInfo(9, 14)"></td>
+      <td class="board" id="9|15" click.delegate="moveBuilding(9, 15)" mouseover.delegate="mouseOverInfo(9, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="10|0" click.delegate="moveBuilding(10, 0)" mouseover.delegate="mouseOverInfo(10, 0)"></td>
+      <td class="board" id="10|1" click.delegate="moveBuilding(10, 1)" mouseover.delegate="mouseOverInfo(10, 1)"></td>
+      <td class="board" id="10|2" click.delegate="moveBuilding(10, 2)" mouseover.delegate="mouseOverInfo(10, 2)"></td>
+      <td class="board" id="10|3" click.delegate="moveBuilding(10, 3)" mouseover.delegate="mouseOverInfo(10, 3)"></td>
+      <td class="board" id="10|4" click.delegate="moveBuilding(10, 4)" mouseover.delegate="mouseOverInfo(10, 4)"></td>
+      <td class="board" id="10|5" click.delegate="moveBuilding(10, 5)" mouseover.delegate="mouseOverInfo(10, 5)"></td>
+      <td class="board" id="10|6" click.delegate="moveBuilding(10, 6)" mouseover.delegate="mouseOverInfo(10, 6)"></td>
+      <td class="board" id="10|7" click.delegate="moveBuilding(10, 7)" mouseover.delegate="mouseOverInfo(10, 7)"></td>
+      <td class="board" id="10|8" click.delegate="moveBuilding(10, 8)" mouseover.delegate="mouseOverInfo(10, 8)"></td>
+      <td class="board" id="10|9" click.delegate="moveBuilding(10, 9)" mouseover.delegate="mouseOverInfo(10, 9)"></td>
+      <td class="board" id="10|10" click.delegate="moveBuilding(10, 10)" mouseover.delegate="mouseOverInfo(10, 10)"></td>
+      <td class="board" id="10|11" click.delegate="moveBuilding(10, 11)" mouseover.delegate="mouseOverInfo(10, 11)"></td>
+      <td class="board" id="10|12" click.delegate="moveBuilding(10, 12)" mouseover.delegate="mouseOverInfo(10, 12)"></td>
+      <td class="board" id="10|13" click.delegate="moveBuilding(10, 13)" mouseover.delegate="mouseOverInfo(10, 13)"></td>
+      <td class="board" id="10|14" click.delegate="moveBuilding(10, 14)" mouseover.delegate="mouseOverInfo(10, 14)"></td>
+      <td class="board" id="10|15" click.delegate="moveBuilding(10, 15)" mouseover.delegate="mouseOverInfo(10, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="11|0" click.delegate="moveBuilding(11, 0)" mouseover.delegate="mouseOverInfo(11, 0)"></td>
+      <td class="board" id="11|1" click.delegate="moveBuilding(11, 1)" mouseover.delegate="mouseOverInfo(11, 1)"></td>
+      <td class="board" id="11|2" click.delegate="moveBuilding(11, 2)" mouseover.delegate="mouseOverInfo(11, 2)"></td>
+      <td class="board" id="11|3" click.delegate="moveBuilding(11, 3)" mouseover.delegate="mouseOverInfo(11, 3)"></td>
+      <td class="board" id="11|4" click.delegate="moveBuilding(11, 4)" mouseover.delegate="mouseOverInfo(11, 4)"></td>
+      <td class="board" id="11|5" click.delegate="moveBuilding(11, 5)" mouseover.delegate="mouseOverInfo(11, 5)"></td>
+      <td class="board" id="11|6" click.delegate="moveBuilding(11, 6)" mouseover.delegate="mouseOverInfo(11, 6)"></td>
+      <td class="board" id="11|7" click.delegate="moveBuilding(11, 7)" mouseover.delegate="mouseOverInfo(11, 7)"></td>
+      <td class="board" id="11|8" click.delegate="moveBuilding(11, 8)" mouseover.delegate="mouseOverInfo(11, 8)"></td>
+      <td class="board" id="11|9" click.delegate="moveBuilding(11, 9)" mouseover.delegate="mouseOverInfo(11, 9)"></td>
+      <td class="board" id="11|10" click.delegate="moveBuilding(11, 10)" mouseover.delegate="mouseOverInfo(11, 10)"></td>
+      <td class="board" id="11|11" click.delegate="moveBuilding(11, 11)" mouseover.delegate="mouseOverInfo(11, 11)"></td>
+      <td class="board" id="11|12" click.delegate="moveBuilding(11, 12)" mouseover.delegate="mouseOverInfo(11, 12)"></td>
+      <td class="board" id="11|13" click.delegate="moveBuilding(11, 13)" mouseover.delegate="mouseOverInfo(11, 13)"></td>
+      <td class="board" id="11|14" click.delegate="moveBuilding(11, 14)" mouseover.delegate="mouseOverInfo(11, 14)"></td>
+      <td class="board" id="11|15" click.delegate="moveBuilding(11, 15)" mouseover.delegate="mouseOverInfo(11, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="12|0" click.delegate="moveBuilding(11, 0)" mouseover.delegate="mouseOverInfo(12, 0)"></td>
+      <td class="board" id="12|1" click.delegate="moveBuilding(12, 1)" mouseover.delegate="mouseOverInfo(12, 1)"></td>
+      <td class="board" id="12|2" click.delegate="moveBuilding(12, 2)" mouseover.delegate="mouseOverInfo(12, 2)"></td>
+      <td class="board" id="12|3" click.delegate="moveBuilding(12, 3)" mouseover.delegate="mouseOverInfo(12, 3)"></td>
+      <td class="board" id="12|4" click.delegate="moveBuilding(12, 4)" mouseover.delegate="mouseOverInfo(12, 4)"></td>
+      <td class="board" id="12|5" click.delegate="moveBuilding(12, 5)" mouseover.delegate="mouseOverInfo(12, 5)"></td>
+      <td class="board" id="12|6" click.delegate="moveBuilding(12, 6)" mouseover.delegate="mouseOverInfo(12, 6)"></td>
+      <td class="board" id="12|7" click.delegate="moveBuilding(12, 7)" mouseover.delegate="mouseOverInfo(12, 7)"></td>
+      <td class="board" id="12|8" click.delegate="moveBuilding(12, 8)" mouseover.delegate="mouseOverInfo(12, 8)"></td>
+      <td class="board" id="12|9" click.delegate="moveBuilding(12, 9)" mouseover.delegate="mouseOverInfo(12, 9)"></td>
+      <td class="board" id="12|10" click.delegate="moveBuilding(12, 10)" mouseover.delegate="mouseOverInfo(12, 10)"></td>
+      <td class="board" id="12|11" click.delegate="moveBuilding(12, 11)" mouseover.delegate="mouseOverInfo(12, 11)"></td>
+      <td class="board" id="12|12" click.delegate="moveBuilding(12, 12)" mouseover.delegate="mouseOverInfo(12, 12)"></td>
+      <td class="board" id="12|13" click.delegate="moveBuilding(12, 13)" mouseover.delegate="mouseOverInfo(12, 13)"></td>
+      <td class="board" id="12|14" click.delegate="moveBuilding(12, 14)" mouseover.delegate="mouseOverInfo(12, 14)"></td>
+      <td class="board" id="12|15" click.delegate="moveBuilding(12, 15)" mouseover.delegate="mouseOverInfo(12, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="13|0" click.delegate="moveBuilding(13, 0)" mouseover.delegate="mouseOverInfo(13, 0)"></td>
+      <td class="board" id="13|1" click.delegate="moveBuilding(13, 1)" mouseover.delegate="mouseOverInfo(13, 1)"></td>
+      <td class="board" id="13|2" click.delegate="moveBuilding(13, 2)" mouseover.delegate="mouseOverInfo(13, 2)"></td>
+      <td class="board" id="13|3" click.delegate="moveBuilding(13, 3)" mouseover.delegate="mouseOverInfo(13, 3)"></td>
+      <td class="board" id="13|4" click.delegate="moveBuilding(13, 4)" mouseover.delegate="mouseOverInfo(13, 4)"></td>
+      <td class="board" id="13|5" click.delegate="moveBuilding(13, 5)" mouseover.delegate="mouseOverInfo(13, 5)"></td>
+      <td class="board" id="13|6" click.delegate="moveBuilding(13, 6)" mouseover.delegate="mouseOverInfo(13, 6)"></td>
+      <td class="board" id="13|7" click.delegate="moveBuilding(13, 7)" mouseover.delegate="mouseOverInfo(13, 7)"></td>
+      <td class="board" id="13|8" click.delegate="moveBuilding(13, 8)" mouseover.delegate="mouseOverInfo(13, 8)"></td>
+      <td class="board" id="13|9" click.delegate="moveBuilding(13, 9)" mouseover.delegate="mouseOverInfo(13, 9)"></td>
+      <td class="board" id="13|10" click.delegate="moveBuilding(13, 10)" mouseover.delegate="mouseOverInfo(13, 10)"></td>
+      <td class="board" id="13|11" click.delegate="moveBuilding(13, 11)" mouseover.delegate="mouseOverInfo(13, 11)"></td>
+      <td class="board" id="13|12" click.delegate="moveBuilding(13, 12)" mouseover.delegate="mouseOverInfo(13, 12)"></td>
+      <td class="board" id="13|13" click.delegate="moveBuilding(13, 13)" mouseover.delegate="mouseOverInfo(13, 13)"></td>
+      <td class="board" id="13|14" click.delegate="moveBuilding(13, 14)" mouseover.delegate="mouseOverInfo(13, 14)"></td>
+      <td class="board" id="13|15" click.delegate="moveBuilding(13, 15)" mouseover.delegate="mouseOverInfo(13, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="14|0" click.delegate="moveBuilding(14, 0)" mouseover.delegate="mouseOverInfo(13, 0)"></td>
+      <td class="board" id="14|1" click.delegate="moveBuilding(14, 1)" mouseover.delegate="mouseOverInfo(14, 1)"></td>
+      <td class="board" id="14|2" click.delegate="moveBuilding(14, 2)" mouseover.delegate="mouseOverInfo(14, 2)"></td>
+      <td class="board" id="14|3" click.delegate="moveBuilding(14, 3)" mouseover.delegate="mouseOverInfo(14, 3)"></td>
+      <td class="board" id="14|4" click.delegate="moveBuilding(14, 4)" mouseover.delegate="mouseOverInfo(14, 4)"></td>
+      <td class="board" id="14|5" click.delegate="moveBuilding(14, 5)" mouseover.delegate="mouseOverInfo(14, 5)"></td>
+      <td class="board" id="14|6" click.delegate="moveBuilding(14, 6)" mouseover.delegate="mouseOverInfo(14, 6)"></td>
+      <td class="board" id="14|7" click.delegate="moveBuilding(14, 7)" mouseover.delegate="mouseOverInfo(14, 7)"></td>
+      <td class="board" id="14|8" click.delegate="moveBuilding(14, 8)" mouseover.delegate="mouseOverInfo(14, 8)"></td>
+      <td class="board" id="14|9" click.delegate="moveBuilding(14, 9)" mouseover.delegate="mouseOverInfo(14, 9)"></td>
+      <td class="board" id="14|10" click.delegate="moveBuilding(14, 10)" mouseover.delegate="mouseOverInfo(41, 10)"></td>
+      <td class="board" id="14|11" click.delegate="moveBuilding(14, 11)" mouseover.delegate="mouseOverInfo(14, 11)"></td>
+      <td class="board" id="14|12" click.delegate="moveBuilding(14, 12)" mouseover.delegate="mouseOverInfo(14, 12)"></td>
+      <td class="board" id="14|13" click.delegate="moveBuilding(14, 13)" mouseover.delegate="mouseOverInfo(14, 13)"></td>
+      <td class="board" id="14|14" click.delegate="moveBuilding(14, 14)" mouseover.delegate="mouseOverInfo(14, 14)"></td>
+      <td class="board" id="14|15" click.delegate="moveBuilding(14, 15)" mouseover.delegate="mouseOverInfo(14, 15)"></td>
+    </tr>
+    <tr>
+      <td class="board" id="15|0" click.delegate="moveBuilding(15, 0)" mouseover.delegate="mouseOverInfo(15, 0)"></td>
+      <td class="board" id="15|1" click.delegate="moveBuilding(15, 1)" mouseover.delegate="mouseOverInfo(15, 1)"></td>
+      <td class="board" id="15|2" click.delegate="moveBuilding(15, 2)" mouseover.delegate="mouseOverInfo(15, 2)"></td>
+      <td class="board" id="15|3" click.delegate="moveBuilding(15, 3)" mouseover.delegate="mouseOverInfo(15, 3)"></td>
+      <td class="board" id="15|4" click.delegate="moveBuilding(15, 4)" mouseover.delegate="mouseOverInfo(15, 4)"></td>
+      <td class="board" id="15|5" click.delegate="moveBuilding(15, 5)" mouseover.delegate="mouseOverInfo(15, 5)"></td>
+      <td class="board" id="15|6" click.delegate="moveBuilding(15, 6)" mouseover.delegate="mouseOverInfo(15, 6)"></td>
+      <td class="board" id="15|7" click.delegate="moveBuilding(15, 7)" mouseover.delegate="mouseOverInfo(15, 7)"></td>
+      <td class="board" id="15|8" click.delegate="moveBuilding(15, 8)" mouseover.delegate="mouseOverInfo(15, 8)"></td>
+      <td class="board" id="15|9" click.delegate="moveBuilding(15, 9)" mouseover.delegate="mouseOverInfo(15, 9)"></td>
+      <td class="board" id="15|10" click.delegate="moveBuilding(15, 10)" mouseover.delegate="mouseOverInfo(15, 10)"></td>
+      <td class="board" id="15|11" click.delegate="moveBuilding(15, 11)" mouseover.delegate="mouseOverInfo(15, 11)"></td>
+      <td class="board" id="15|12" click.delegate="moveBuilding(15, 12)" mouseover.delegate="mouseOverInfo(15, 12)"></td>
+      <td class="board" id="15|13" click.delegate="moveBuilding(15, 13)" mouseover.delegate="mouseOverInfo(15, 13)"></td>
+      <td class="board" id="15|14" click.delegate="moveBuilding(15, 14)" mouseover.delegate="mouseOverInfo(15, 14)"></td>
+      <td class="board" id="15|15" click.delegate="moveBuilding(15, 15)" mouseover.delegate="mouseOverInfo(15, 15)"></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="flex-child green">
+    <table class="table table-hover table-dark" id="information">
+      <thead>
+      <tr>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Hunter Base:</th>
+        <td style="font-family: lucida grande,serif; font-size: 16px">${_hunterBase.nameOfBase}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Level:</th>
+        <td style="font-family: lucida grande,serif">${_hunterBase.levelOfBase}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Coins:</th>
+        <td style="font-family: lucida grande,serif">${_hunterBase.coins}</td>
+      </tr>
+    </table>
+
+
+    <table id="shopTable" class="table table-bordered">
+      <thead>
+      <tr>
+        <th>
+          Tower
+        </th>
+        <th>
+          Health
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Range of building
+        </th>
+        <th>
+          Attack Damage
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr repeat.for="shopBuilding of shopBuildings" id="${shopBuilding.id}" class="shopBuilding">
+        <td click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.nameOfBuilding}
+        </td>
+        <td  click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.maxHealth}
+        </td>
+        <td  click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.price}
+        </td>
+        <td  click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.buildingTypeVariant}
+        </td>
+        <td  click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.rangeOfBuilding}
+        </td>
+        <td  click.delegate="buildingSelectedFromShop(shopBuilding.id)">
+          ${shopBuilding.attackDamage}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-bordered" id="unplacedBuildings" style="box-shadow: 0 -2px 2px rgba(34,34,34,0.6);font-weight: 600;display: none">
+      <thead>
+      <tr>
+        <th>
+          Unplaced Buildings
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr repeat.for="unplacedBuilding of unplacedBuildings" id="${unplacedBuilding.id}">
+        <td click.delegate="unselectedBuildingSelect(unplacedBuilding.id)" onclick="this.style.backgroundColor = 'Red';" if.bind="hasMoreThanOne">
+          ${unplacedBuilding.nameOfBuilding}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-hover table-dark" id="selectedPeacefulBuilding" style="display: none" >
+      <thead>
+      <tr>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Building Name:</th>
+        <td style="font-family: lucida grande,serif; font-size: 16px">${selectedBuilding.nameOfBuilding}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Health:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.maxHealth}hp</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Level:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.levelOfBuilding}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Tower Type:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.buildingTypeVariant}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-hover table-dark" id="selectedAttackBuilding" style="display: none">
+      <thead>
+      <tr>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Building Name:</th>
+        <td style="font-family: lucida grande,serif; font-size: 16px">${selectedBuilding.nameOfBuilding}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Health:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.maxHealth}hp</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Level:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.levelOfBuilding}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Tower Type:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.buildingTypeVariant}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Range:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.rangeOfBuilding}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="font-family: lucida grande,serif">Attack damage:</th>
+        <td style="font-family: lucida grande,serif">${selectedBuilding.attackDamage}</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+    <table id="heroes" class="table table-bordered">
+      <thead>
+      <tr>
+        <th>
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Health
+        </th>
+        <th>
+          Attack Damage
+        </th>
+        <th>
+          Level
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr repeat.for="hero of heroes" id="${hero.id}" class="hero">
+        <td>
+          ${$index + 1}
+        </td>
+        <td>
+          ${hero.nameOfHero}
+        </td>
+        <td>
+          ${hero.maxHealth}
+        </td>
+        <td>
+          ${hero.attackDamage}
+        </td>
+        <td>
+          ${hero.levelOfHero}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <div id="overlay" style="display: none">
+    <span><br>Are you sure you want to buy ${selectedBuildingFromShop.nameOfBuilding} for ${selectedBuildingFromShop.price} coins?
+    <br>
+      <button class="btn-primary" click.delegate="buildingSelectedFromShopConfirm()" if.bind="hasMoreThanOne">Yes</button>
+      <button class="btn-danger" click.delegate="buildingSelectedFromShopCancel()">No</button>
+    </span>
+  </div>
+  </body>
+</template>

@@ -1,0 +1,69 @@
+table#hunterBase {
+  min-width: 500px;
+  min-height: 500px;
+  empty-cells: show;
+  float: left;
+  height: 100%;
+}
+
+.board {
+  width: 3em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  border: 1px solid #000;
+  background-image: url("grass.jpg");
+}
+.HunterHut {
+  background-image: url("HUNTERHUT.jpg");
+}
+
+#information {
+  display:inline-flex;
+  max-width: 300px;
+}
+
+#selectedPeacefulBuilding {
+  float: left;
+  margin-left: 50px;
+  max-width: 300px;
+}
+
+#selectedAttackBuilding {
+  float: left;
+  margin-left: 50px;
+  max-width: 300px;
+}
+
+.flex-container {
+  position: fixed;
+  left: 50px;
+  right: 50px;
+  display: flex;
+}
+
+.flex-child {
+  flex-shrink: 1;
+  border: 2px solid yellow;
+}
+
+.flex-child:first-child {
+  margin-right: 10px;
+}
+#heroes {
+  float: bottom;
+}
+
+td {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+td image
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

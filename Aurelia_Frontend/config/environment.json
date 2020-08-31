@@ -1,0 +1,6 @@
+{
+  "debug": true,
+  "testing": true,
+  "backendUrl" : "https://localhost:5001/api/v1.0/",
+  "swaggerUrl" : "https://localhost:5001/swagger/index.html"
+}
