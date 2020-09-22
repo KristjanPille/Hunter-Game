@@ -1,0 +1,11 @@
+1 -> UP/DOWN/LEFT/RIGHT
+
+2 -> DIAGONAL
+
+3 -> DIAGONAL/UP/DOWN/LEFT/RIGHT
+
+4 -> UP/DOWN
+
+5 -> RIGHT/LEFT
+
+6 -> FULL COVERAGE OF RANGE; Served for nuclear hornet

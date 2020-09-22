@@ -64,6 +64,8 @@ namespace DAL.App.EF.Migrations
                     BuildingType = table.Column<int>(nullable: false),
                     RangeOfBuilding = table.Column<int>(nullable: true),
                     AttackDamage = table.Column<int>(nullable: true),
+                    AttackType = table.Column<int>(nullable: true),
+                    AttackSpeed = table.Column<double>(nullable: true),
                     Price = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -217,6 +219,8 @@ namespace DAL.App.EF.Migrations
                     BuildingType = table.Column<int>(nullable: false),
                     RangeOfBuilding = table.Column<int>(nullable: true),
                     AttackDamage = table.Column<int>(nullable: true),
+                    AttackType = table.Column<int>(nullable: true),
+                    AttackSpeed = table.Column<double>(nullable: true),
                     XCoordinate = table.Column<int>(nullable: true),
                     YCoordinate = table.Column<int>(nullable: true),
                     HunterBaseId = table.Column<Guid>(nullable: true)

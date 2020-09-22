@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.App.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200828163339_InitialDbCreation")]
+    [Migration("20200921142238_InitialDbCreation")]
     partial class InitialDbCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,12 @@ namespace DAL.App.EF.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("AttackDamage")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("AttackSpeed")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("AttackType")
                         .HasColumnType("int");
 
                     b.Property<int>("BuildingType")
@@ -276,6 +282,12 @@ namespace DAL.App.EF.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("AttackDamage")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("AttackSpeed")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("AttackType")
                         .HasColumnType("int");
 
                     b.Property<int>("BuildingType")

@@ -23,6 +23,11 @@ namespace DAL.App.DTO
         public int? RangeOfBuilding { get; set; }
         
         public int? AttackDamage { get; set; }
+        
+        public int? AttackType { get; set; }
+
+        public double? AttackSpeed { get; set; }
+        
         public int Price { get; set; } = default!;
     }
 }

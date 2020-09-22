@@ -28,6 +28,12 @@ namespace DAL.App.EF.Migrations
                     b.Property<int?>("AttackDamage")
                         .HasColumnType("int");
 
+                    b.Property<double?>("AttackSpeed")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("AttackType")
+                        .HasColumnType("int");
+
                     b.Property<int>("BuildingType")
                         .HasColumnType("int");
 
@@ -274,6 +280,12 @@ namespace DAL.App.EF.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("AttackDamage")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("AttackSpeed")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("AttackType")
                         .HasColumnType("int");
 
                     b.Property<int>("BuildingType")

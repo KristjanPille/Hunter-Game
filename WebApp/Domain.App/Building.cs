@@ -25,6 +25,10 @@ namespace Domain.App
         
         public int? AttackDamage { get; set; }
         
+        public int? AttackType { get; set; }
+        
+        public double? AttackSpeed { get; set; }
+        
         public int? XCoordinate { get; set; } 
         public int? YCoordinate { get; set; }
         

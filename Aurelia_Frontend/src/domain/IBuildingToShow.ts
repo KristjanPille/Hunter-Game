@@ -7,6 +7,8 @@ export interface IBuildingToShow {
   buildingTypeVariant?: string
   rangeOfBuilding?: number
   attackDamage?: number
+  AttackType?: number
+  AttackSpeed?: number
   xCoordinate?: number
   yCoordinate?: number
   hunterBaseId?: string
