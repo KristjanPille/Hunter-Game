@@ -1,4 +1,5 @@
-﻿﻿using System.Collections.Generic;
+﻿﻿using System;
+ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -102,6 +103,12 @@ using PublicApi.DTO.v1.Identity;
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(MessageDTO))]
         public async Task<IActionResult> Register([FromBody] RegisterDTO dto)
         {
+            Console.WriteLine(dto.Email);
+            Console.WriteLine(dto.FirstName);
+            Console.WriteLine(dto.LastName);
+            Console.WriteLine(dto.Password);
+            Console.WriteLine(dto.NameOfBase);
+
             var appUser = await _userManager.FindByEmailAsync(dto.Email);
             if (appUser != null)
             {
