@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import dirt from '../../Buildings_Gallery/dirt.jpg'
 import CANNONTOWER from '../../Buildings_Gallery/CANNONTOWER.jpg'
@@ -15,7 +15,6 @@ function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero 
     const [homeBase, setHomeBase] = useState({});
     const [activeBuildingID, setActiveBuildingID] = useState("");
 
-
     function coordinatesToViewID(xCoordinate, yCoordinate){
         return xCoordinate + '|' + yCoordinate;
     }
@@ -27,6 +26,7 @@ function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero 
     const handleHunterBaseHero = useCallback((activeHero) => {
         handleHero(activeHero);
     }, []);
+
 
     function heroMover(x, y){
 
@@ -47,7 +47,7 @@ function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero 
 
             let backGroundBuilding = `url(dirt)`
 
-            // Not nice solution
+            // Not permanent solution
             if (building === "HUNTERHUT") {
                 backGroundBuilding = `url(${HUNTERHUT})`;
             } else if (building === "CANNONTOWER") {
@@ -106,7 +106,7 @@ function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero 
         }
 
         return (
-            <div id="div0" style={boardCSS}>
+            <div autoFocus tabIndex={-1} id="div0" style={boardCSS}>
 
                 <div className="childDiv" style={boardCSS}>{board}</div>
 

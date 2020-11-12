@@ -75,7 +75,7 @@ using Microsoft.EntityFrameworkCore;
                 RangeOfBuilding = 5,
                 AttackDamage = 8,
                 AttackType = 1,
-                AttackSpeed = 1,
+                AttackSpeed = 100,
                 Price = 210,
                 Id = new Guid("00000000-0000-0000-0000-000000000004")
             },
@@ -88,7 +88,7 @@ using Microsoft.EntityFrameworkCore;
                 RangeOfBuilding = 5,
                 AttackDamage = 15,
                 AttackType = 6,
-                AttackSpeed = 4,
+                AttackSpeed = 400,
                 Price = 400,
                 Id = new Guid("00000000-0000-0000-0000-000000000005")
             }, 
@@ -126,7 +126,7 @@ using Microsoft.EntityFrameworkCore;
                 RangeOfBuilding = 3,
                 AttackDamage = 10,
                 AttackType = 4,
-                AttackSpeed = 2,
+                AttackSpeed = 500,
                 HunterBaseId = hunterBases[0].Id,
                 HunterBase = hunterBases[0],
                 Id = new Guid("00000000-0000-0000-0000-000000000007")
