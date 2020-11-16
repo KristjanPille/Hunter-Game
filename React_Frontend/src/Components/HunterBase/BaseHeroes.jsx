@@ -1,34 +1,28 @@
-import React, {useCallback, useEffect, useRef, useState} from "react";
-import {IBuilding} from "../../domain/IBuilding";
+import React, {useEffect, useRef, useState} from "react";
 import {IHunterBase} from "../../domain/IHunterBase";
 import {HunterBaseApi} from "../../services/HunterBaseApi";
 import {HeroesApi} from "../../services/HeroesApi";
 import {IHero} from "../../domain/IHero";
-import Board from "../HunterBase/BoardCreate";
 
-function AttackHeroes({ activeHeroHandler, activeHero }) {
+const HeroesRow = (props) => (
+    <tr>
+        <td style={{fontWeight: "bold"}}>{props.hero.nameOfHero}</td>
+    </tr>
+);
 
+const Heroes = () => {
     const [heroes, setHeroes] = useState([]);
-
-    const HeroesRow = (props) => (
-        <tr>
-            <td style={{fontWeight: "bold"}} onClick={(i) => selectHero(props.hero)}>{props.hero.nameOfHero}</td>
-        </tr>
-    );
-
-
-    const heroHandler = useCallback((hero) => {
-        activeHeroHandler(hero);
-    }, []);
-
-    function selectHero(hero){
-
-        heroHandler(hero)
-
-    }
-
+    const [hunterBase, setHunterBase] =  useState({
+        appUserId: "",
+        coins: 0,
+        id: "",
+        levelOfBase: 0,
+        nameOfBase: ""
+    });
     useEffect(() => {
         const callApi = async () => {
+            const base = await HunterBaseApi.getHunterBase();
+            setHunterBase(base);
             const heroes = await HeroesApi.getAll();
             setHeroes(heroes);
         };
@@ -53,4 +47,4 @@ function AttackHeroes({ activeHeroHandler, activeHero }) {
     );
 }
 
-export default AttackHeroes;
+export default Heroes;

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import '../../index.css';
-import background from '../../Buildings_Gallery/background.jpg'
+import background from '../../BuildingsGallery/background.jpg'
 import initialiseBoard from "../Helpers/initialiseBoard";
 import Buildings from "./HomeBuildings";
 import Heroes from "./BaseHeroes";
@@ -13,8 +13,8 @@ import {IBuilding} from "../../domain/IBuilding";
 import PlayerStore from "./PlayerStore";
 import HunterStore from "./HunterStore";
 
-export default class Game extends React.Component<{}, { squares: any, status: any, hunterBase: IHunterBase, buildings: IBuilding[], unplacedBuilding: IBuilding }> {
-    constructor(props: any) {
+export default class Game extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             squares: initialiseBoard(),
@@ -63,7 +63,7 @@ export default class Game extends React.Component<{}, { squares: any, status: an
 
     }
 
-    handleClick(i: any) {
+    handleClick(i) {
         const squares = [...this.state.squares];
     }
 
@@ -95,7 +95,7 @@ export default class Game extends React.Component<{}, { squares: any, status: an
                         <div id="board">
                         <Board
                             // @ts-ignore
-                            onClick={(i: any) => this.handleClick(i)}
+                            onClick={(i) => this.handleClick(i)}
                             parentBuildings={this.state.buildings}
                             unPlacedBuilding={this.state.unplacedBuilding}
                             unPlacedBuildingHandler={this.handleUnPlacedBuilding}

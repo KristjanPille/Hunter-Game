@@ -1,18 +1,13 @@
 import React, {useCallback, useState} from 'react';
 
 import Square from './square.js';
-import dirt from '../../Buildings_Gallery/dirt.jpg'
-import CANNONTOWER from '../../Buildings_Gallery/CANNONTOWER.jpg'
-import HUNTERHUT from '../../Buildings_Gallery/HUNTERHUT.jpg'
-import NUCLEARHORNET from '../../Buildings_Gallery/NUCLEARHORNET.jpg'
-import ARCHERTOWER from '../../Buildings_Gallery/ARCHERTOWER.jpg'
+import dirt from '../../BuildingsGallery/dirt.jpg'
+import cannonTower from '../../BuildingsGallery/cannonTower.jpg'
+import hunterHut from '../../BuildingsGallery/hunterHut.jpg'
+import nuclearHornet from '../../BuildingsGallery/nuclearHornet.jpg'
+import archerTower from '../../BuildingsGallery/archerTower.jpg'
 import initialiseBoard from "../Helpers/initialiseBoard";
-import {HunterBaseApi} from "../../services/HunterBaseApi";
 import {BuildingsApi} from "../../services/BuildingsApi";
-import {IHunterBase} from "../../domain/IHunterBase";
-import {IBuilding} from "../../domain/IBuilding";
-import {IHero} from "../../domain/IHero";
-import HunterStore from "./HunterStore";
 
 function Board({ parentBuildings, unPlacedBuilding, unPlacedBuildingHandler, buildingsChange }) {
 
@@ -96,16 +91,17 @@ function Board({ parentBuildings, unPlacedBuilding, unPlacedBuildingHandler, bui
             const building = parentBuildings.find(a => a.xCoordinate === i && a.yCoordinate === j).nameOfBuilding.toUpperCase().replace(/\s+/g,'');
 
             let a = `url(dirt)`
-
-            // Not nice solution
+            console.log(building)
+            // Temporary solution
             if (building === "HUNTERHUT") {
-                a = `url(${HUNTERHUT})`;
+                a = `url(${hunterHut})`;
             } else if (building === "CANNONTOWER") {
-                a = `url(${CANNONTOWER})`;
+                console.log("siin!!")
+                a = `url(${cannonTower})`;
             } else if (building === "ARCHERTOWER") {
-                a = `url(${ARCHERTOWER})`;
+                a = `url(${archerTower})`;
             } else if (building === "NUCLEARHORNET") {
-                a = `url(${NUCLEARHORNET})`;
+                a = `url(${nuclearHornet})`;
             }
 
             return <Square

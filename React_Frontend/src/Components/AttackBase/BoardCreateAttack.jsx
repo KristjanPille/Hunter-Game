@@ -1,19 +1,16 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import dirt from '../../Buildings_Gallery/dirt.jpg'
-import CANNONTOWER from '../../Buildings_Gallery/CANNONTOWER.jpg'
+import dirt from '../../BuildingsGallery/dirt.jpg'
+import CANNONTOWER from '../../BuildingsGallery/cannonTower.jpg'
 import WARRIOR from '../../Hunters_Gallery/soldier.jpg'
-import HUNTERHUT from '../../Buildings_Gallery/HUNTERHUT.jpg'
-import NUCLEARHORNET from '../../Buildings_Gallery/NUCLEARHORNET.jpg'
-import ARCHERTOWER from '../../Buildings_Gallery/ARCHERTOWER.jpg'
+import hunterHut from '../../BuildingsGallery/hunterHut.jpg'
+import nuclearHornet from '../../BuildingsGallery/nuclearHornet.jpg'
+import archerTower from '../../BuildingsGallery/archerTower.jpg'
 import initialiseBoard from "../Helpers/initialiseBoard";
 import Square from "../HunterBase/square";
+import cannonTower from "../../BuildingsGallery/cannonTower.jpg";
 
 function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero }) {
-
-    const [squares, setSquares] = initialiseBoard();
-    const [homeBase, setHomeBase] = useState({});
-    const [activeBuildingID, setActiveBuildingID] = useState("");
 
     function coordinatesToViewID(xCoordinate, yCoordinate){
         return xCoordinate + '|' + yCoordinate;
@@ -49,13 +46,13 @@ function AttackBoard({ parentBuildings, buildingsChange, activeHero, handleHero 
 
             // Not permanent solution
             if (building === "HUNTERHUT") {
-                backGroundBuilding = `url(${HUNTERHUT})`;
+                backGroundBuilding = `url(${hunterHut})`;
             } else if (building === "CANNONTOWER") {
-                backGroundBuilding = `url(${CANNONTOWER})`;
+                backGroundBuilding = `url(${cannonTower})`;
             } else if (building === "ARCHERTOWER") {
-                backGroundBuilding = `url(${ARCHERTOWER})`;
+                backGroundBuilding = `url(${archerTower})`;
             } else if (building === "NUCLEARHORNET") {
-                backGroundBuilding = `url(${NUCLEARHORNET})`;
+                backGroundBuilding = `url(${nuclearHornet})`;
             }
 
             return <Square

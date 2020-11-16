@@ -10,13 +10,13 @@
     padding: 0;
     text-align: center;
     width: 50px;
-    background-image: url("/src/Buildings_Gallery/dirt.jpg");
+    background-image: url("/src/BuildingsGallery/dirt.jpg");
 }
 html, body {
     height: 100vh;
     width: 100vw;
     font: 14px "Century Gothic", Futura, sans-serif;
-    background-image: url("/src/Buildings_Gallery/background.jpg");
+    background-image: url("/src/BuildingsGallery/background.jpg");
 }
 .board-row:after {
     clear: both;

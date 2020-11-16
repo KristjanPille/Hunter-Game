@@ -10,12 +10,12 @@ import Popover from '@material-ui/core/Popover';
 import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
 import SvgIcon, { SvgIconProps } from '@material-ui/core/SvgIcon';
 import {green} from "@material-ui/core/colors";
-import background from "../../Buildings_Gallery/background.jpg";
+import background from "../../BuildingsGallery/background.jpg";
 import {BuildingsApi} from "../../services/BuildingsApi";
 import {IBuildingCreate} from "../../domain/IBuildingCreate";
 import {IBuilding} from "../../domain/IBuilding";
 
-function HomeIcon(props: SvgIconProps) {
+function HomeIcon(props) {
     return (
         <SvgIcon {...props}>
             <path d="M7,10L12,15L17,10H7Z" />
@@ -26,31 +26,25 @@ function HomeIcon(props: SvgIconProps) {
 // @ts-ignore
 function PlayerStore({ onNameChange }) {
 
-    const PlayerStore = (data: any) => {
-        const [shopBuildings, setShopBuildings] = useState([] as IShopBuilding[]);
-        const [buildings, setBuildings] = useState([] as IBuilding[]);
+    const PlayerStore = (data) => {
+        const [shopBuildings, setShopBuildings] = useState([]);
+        const [buildings, setBuildings] = useState([]);
         const [hovering, setHovering] = useState("");
-        const [hunterBase, setHunterBase] = useState<IHunterBase>({
-            appUserId: "",
-            coins: 0,
-            id: "",
-            levelOfBase: 0,
-            nameOfBase: ""
-        });
+        const [hunterBase, setHunterBase] = useState();
 
 
-        function MouseOver(event: any) {
+        function MouseOver(event) {
             setHovering(event.currentTarget.id)
         }
 
-        function MouseOut(event: any) {
+        function MouseOut(event) {
             setHovering("")
         }
 
-        async function BuyBuilding(shopBuilding: IShopBuilding) {
+        async function BuyBuilding(shopBuilding) {
             console.log("buy: " + shopBuilding)
 
-            let newBuilding = new class implements IBuildingCreate {
+            let newBuilding = new class {
                 appUserId = hunterBase.appUserId;
                 nameOfBuilding = shopBuilding.nameOfBuilding;
                 maxHealth = shopBuilding.maxHealth;
@@ -69,10 +63,10 @@ function PlayerStore({ onNameChange }) {
 
         }
 
-        const BuildingsRow = (props: { building: IShopBuilding }) => (
+        const BuildingsRow = (props) => (
             <tr>
                 <PopupState variant="popover" popupId="demo-popup-popover">
-                    {(popupState: any) => (
+                    {(popupState) => (
                         <div>
                             <Button style={{color: "#E41C1C", fontWeight: "bold"}} {...bindTrigger(popupState)}>
                                 {props.building.nameOfBuilding}
@@ -91,10 +85,10 @@ function PlayerStore({ onNameChange }) {
                             >
                                 <Box p={4} style={{backgroundColor: "#99aab5"}}>
                                     <Typography><b>Health:</b> {props.building.maxHealth}</Typography>
-                                    {props.building.attackDamage != undefined &&
+                                    {props.building.attackDamage !== undefined &&
                                     <Typography><b>Attack:</b> {props.building.attackDamage}</Typography>
                                     }
-                                    {props.building.rangeOfBuilding != undefined &&
+                                    {props.building.rangeOfBuilding !== undefined &&
                                     <Typography><b>Range:</b> {props.building.rangeOfBuilding}</Typography>
                                     }
                                     <Typography><b>Price:</b> <b
@@ -110,7 +104,7 @@ function PlayerStore({ onNameChange }) {
             </tr>
         );
 
-        const HoverRow = (props: { building: IShopBuilding }) => (
+        const HoverRow = (props) => (
             <td>{props.building.id}</td>
         );
 
